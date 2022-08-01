@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dapp Rental Code</title>
+    <link rel="stylesheet" href="mycss.css"></head>
+    <Body background="wall2.jpg"> <br>
+        
+  </head>
+
+  <body>
+
+    <div class="center">
+
+      <div class="left">
+
+
+        <div style="color: aliceblue;"> Network:  <span id="network"></span> </div> <br> <br>
+      
+        <div style="color: aliceblue;"> ChainId: <span id="chainId"></span></div> <br> <br>
+  
+        <div style="color: aliceblue;">  Accounts: <span id="Account"> </span> </div> <br> <br>
+  
+        <div style="color: aliceblue;">  Balance: <span id="Balance"></span> </div> <br> <br>
+
+      <button id="connectButton" style="background-color:#18d8e6;;height:25px;width:200px;margin-right:100px"> Connect </button>
+
+      <button id="disConnectButton" style="background-color:#18d8e6;height:25px;width:200px"> DisConnect </button> <br> <br> <br> <br>
+
+    <h1> Lend your NFT</h1>
+
+      <input type="text" id='lendId' placeholder="lendId" style="margin-right:20px" name = "LID"></input>
+      <input type="text" id='nftAddress' placeholder="nftAddress" style="margin-right:20px" name = "nftAddress"></input>
+      <input type="text" id='tokenId' placeholder="tokenId" style="margin-right:20px" name = "tokenId"></input>
+      <input type="text" id='maxduration' placeholder="maxduration" style="margin-right:20px" name = "maxduration"></input>
+      <input type="text" id='dailyRent' placeholder="dailyRent" style="margin-right:20px" name = "dailyRent"></input>
+      <input type="text" id='lendingQuantity' placeholder="lendingQuantity" style="margin-right:20px" name = "lendingQuantity"></input>
+      <input type="text" id='paymentAddress' placeholder="paymentAddress" style="margin-right:20px" name = "paymentAddress"></input>
+      <input type="text" id='lendTime' placeholder="lendTime" style="margin-right:20px" name = "lendTime"></input> <br> <br>
+      
+      <button id="lend" style='margin-right:110px;background-color:#18d8e6;'>lend NFT</button>
+      <br><br><br><br>
+
+
+    <h1> rent the NFT</h1>
+
+      <input type="text" id='lendID' placeholder="lendId" style="margin-right:20px" name = "LID">
+      <input type="text" id='quantity' placeholder="quantity" style="margin-right:20px" name = "quantity">
+      <input type="text" id='duration' placeholder="duration" style="margin-right:20px" name = "duration"><br><br>
+
+      <button id="rent" style='margin-right:110px;background-color:#18d8e6;'>rent</button>
+
+    </input> <br> <br><br><br>
+
+    <h1> claim the NFT</h1>
+
+    <input type="text" id='rentalId' placeholder="rentId" style="margin-right:20px" name = "rID"><br><br>
+
+    <button id="claim" value="Button" style='margin-right:110px;background-color:#18d8e6;'>claim</button>
+
+  </input> <br> <br><br><br>
+
+  <h1> Getback your NFT</h1>
+
+  <input type="text" id='lendIDs' placeholder="lendId" style="margin-right:20px" name = "rID"><br><br>
+
+  <button id="regain" value="Button" style='margin-right:110px;background-color:#18d8e6;'>GetBack</button></div><br><br>
+
+    <button hidden id="deploy" value="Button" style='margin-right:110px;background-color:#18d8e6;'> Deploy </button>
+    <button hidden id="mBid" value="Button" style='margin-right:110px;background-color:#18d8e6;'> MintAndAcceptBid </button> 
+    <button hidden id="mBuy" value="Button" style='margin-right:110px;background-color:#18d8e6;'> MintAndBuyAsset </button> 
+    <button hidden id="bid" value="Button" style='margin-right:110px;background-color:#18d8e6;'> ExecuteBid </button>
+    <button hidden id="buy" value="Button"  style= "margin-right:100px;background-color:#18d8e6;"> BuyAsset </button> 
+    <button hidden id="signbid" value="Button" style='margin-right:110px;background-color:#18d8e6;'> sign Bid </button> >
+    <button hidden id="signseller" value="Button" style= "margin-right:100px;background-color:#18d8e6;"> sign seller </button>
+    <button hidden id="approveNft" value="Button" style='margin-right:110px;background-color:#18d8e6;' >ApproveNFT</button>
+    <button hidden id="mint1155" value="Button" style='margin-right:110px;background-color:#18d8e6;'>Mint1155</button>
+    <button hidden id="mint721" value="Button" style='margin-right:110px;background-color:#18d8e6;'>Mint721</button>
+  </input> <br> <br>
+
+  <h1> Get Details-Lend/Rent</h1>
+
+  <input type="text" id='rent/LendId' placeholder="lend/rentId" style="margin-right:20px" name = "rID"><br><br>
+
+  <button id="getLendDetails" value="Button" style='margin-right:110px;background-color:#18d8e6;'>Get Lend Details</button></div><br><br>
+
+  <button id="getrentDetails" value="Button" style='margin-right:110px;background-color:#18d8e6;'>Get rent Details</button></div><br><br>
+
+  <div style="color: aliceblue;"> lend/rent Id:  <span id="lendId-read"></span> </div> <br> <br>
+      
+  <div style="color: aliceblue;"> lender: <span id="lender-read"></span></div> <br> <br>
+
+  <div style="color: aliceblue;"> render: <span id="renter-read"></span></div> <br> <br>
+
+  <div style="color: aliceblue;">  tokenAddress: <span id="tokenAddress-read"> </span> </div> <br> <br>
+
+  <div style="color: aliceblue;">  tokenId: <span id="tokenId-read"></span> </div> <br> <br>
+
+  <div style="color: aliceblue;">  dailyRent in Matic:  <span id="dailyrent"></span> </div> <br> <br>
+
+  <div style="color: aliceblue;">  maxDuration in Days:  <span id="maxDuration-read"></span> </div> <br> <br>
+
+  <div style="color: aliceblue;"> lendedQty: <span id="lendedQty"></span></div> <br> <br>
+
+  <div style="color: aliceblue;">  paymentAddress: <span id="paymentAddress-read"> </span> </div> <br> <br>
+
+  <div style="color: aliceblue;">  lendedTime: <span id="lendedTime"></span> </div> <br> <br>
+
+  <div style="color: aliceblue;"> isValid:  <span id="isValid"></span> </div> <br> <br>
+
+
+</div>
+</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="bundle.js"></script>
+
+
+
+</body>
+</html>
+
+

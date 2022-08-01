@@ -1,0 +1,152 @@
+<html>
+  <style>
+.box {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  font-family: sans-serif;
+  text-align: center;
+  line-height: 1;
+ -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  max-width: 50%;
+  max-height: 50%;
+  padding: 20px 40px;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-image: url(https://picsum.photos/id/1080/6858/4574), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));
+  background-position: center center;
+  background-repeat:repeat;
+  background-size: cover;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+</style>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dapp Sample Code</title>
+    <link rel="stylesheet" href="mycss.css"></head>
+        
+  </head>
+
+
+
+  <body>
+
+    <div>
+
+      <div>
+        <div class="bg-image"></div>
+        <div style="color: aliceblue;"> Network:  <span id="network"></span> </div> <br> <br>
+      
+        <div style="color: aliceblue;"> ChainId: <span id="chainId"></span></div> <br> <br>
+  
+        <div style="color: aliceblue;">  Accounts: <span id="Account"> </span> </div> <br> <br>
+  
+        <div style="color: aliceblue;">  Balance: <span id="Balance"></span> </div> <br> <br>
+
+      <button id="connectButton" style="background-color:#18d8e6;;height:25px;width:200px;margin-right:100px"> Connect </button>
+
+      <button id="disConnectButton" style="background-color:#18d8e6;height:25px;width:200px"> DisConnect </button> <br><br>
+
+    <form action="./rental.html">
+        <input type="submit" style="background-color:#18d8e6;height:25px;width:200px" value="way to lend and rent" />
+    </form><br><br>
+
+
+      <input type="text" id='uri' placeholder="tokenURI" style="margin-right:20px" name = "uri"></input>
+      <input type="number" id='rFee' placeholder="royaltyFee" style="margin-right:20px" name = "rFee"></input>
+      <input type="number" id='supply' placeholder="supply" style="margin-right:20px" name = "supply"></input> <br> <br>
+
+      <button id="mint721" value="Button" style='margin-right:110px;background-color:#18d8e6;'>Mint721</button>
+
+      <button id="mint1155" value="Button" style='margin-right:110px;background-color:#18d8e6;'>Mint1155</button> <br> <br> <br>
+
+
+
+      <select name="nftType" id="nftType">
+        <option>select</option>
+        <option value="0">ERC1155</option>
+        <option value="1">ERC721</option>
+      </select> <br> <br>
+
+      <button id="approveNft" value="Button" style='margin-right:110px;background-color:#18d8e6;' >ApproveNFT</button> <br> <br> <br>
+
+
+      <select name="assetType" id="assetType">
+        <option>select</option>
+        <option value="0">ERC1155</option>
+        <option value="1">ERC721</option>
+        <option value="2">lazyMint1155</option>
+        <option value="3">lazyMint721</option>
+      </select>
+      <input type="number" id='tokenId'  style="width: 100px;" placeholder="tokenId" style= "margin-right:20px"></input> 
+      <input type="number" id='nftPrice'  style="width: 100px;" placeholder="nftPrice" style= "margin-right:20px"></input>
+      <input type="number" id='quantity' placeholder="quantity" style= "margin-right:20px"></input> <br> <br>
+
+      <button id="signseller" value="Button" style= "margin-right:100px;background-color:#18d8e6;"> sign seller </button>
+
+      <button id="signbid" value="Button" style='margin-right:110px;background-color:#18d8e6;'> sign Bid </button> <br> <br> <br>
+
+
+      <select name="buynftType" id="buynftType">
+        <option>select</option>
+        <option value="0">NFT721</option>
+        <option value="1">NFT1155</option>
+      </select>
+      <input type="number" id='buytokenId'  style="width: 100px;" placeholder="tokenId" style= "margin-right:20px"></input>
+      <input type="number" id='buynftPrice' style="width: 100px;" placeholder="nftPrice" style= "margin-right:20px"></input>
+      <input type="text" id='buysignValue' placeholder="signValue" style= "margin-right:20px"></input>
+      <input type="text" id='buysellerAddress' placeholder="sellerAddress" style= "margin-right:20px"></input>
+      <input type="number" id='buyquantity' placeholder="quantity" style= "margin-right:20px"></input> <br> <br>
+
+
+      <button id="buy" value="Button"  style= "margin-right:100px;background-color:#18d8e6;"> BuyAsset </button> <br> <br> <br>
+
+      <select name="bidnftType" id="bidnftType">
+        <option>select</option>
+        <option value="0">NFT721</option>
+        <option value="1">NFT1155</option>
+      </select>
+      <input type="number" id='bidtokenId'  style="width: 100px;" placeholder="tokenId" style= "margin-right:20px"></input>
+      <input type="number" id='bidnftPrice'  style="width: 100px;" placeholder="nftPrice" style= "margin-right:20px"></input>
+      <input type="text" id='bidsignValue' placeholder="signValue" style= "margin-right:20px"></input>
+      <input type="text" id='bidbuyerAddress' placeholder="buyerAddress" style= "margin-right:20px"></input>
+      <input type="number" id='bidquantity' placeholder="quantity" style= "margin-right:20px"></input> <br> <br>
+
+      <button id="bid" value="Button" style='margin-right:110px;background-color:#18d8e6;'> ExecuteBid </button> <br> <br> <br>
+
+
+      <select name="ownNftType" id="ownNftType">
+        <option>select</option>
+        <option value="1">ERC721</option>
+        <option value="0">ERC1155</option>
+      </select>
+      <input type="text" id='ownNftName' placeholder="Name" ></input> 
+      <input type="text" id='ownNftSymbol' placeholder="Symbol"></input> <br> <br>
+
+      <button id="deploy" value="Button" style='margin-right:110px;background-color:#18d8e6;'> Deploy </button> <br> <br>
+      <button hidden id="lend" style='margin-right:110px;background-color:#18d8e6;'>lend NFT</button>
+
+
+    </div>
+  </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="bundle.js"></script>
+
+  </body>
+</html>
+
